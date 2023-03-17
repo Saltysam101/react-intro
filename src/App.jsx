@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FilmsList from './components/filmsList.jsx'
 
 export default class App extends Component {
   constructor(props){
@@ -20,7 +21,6 @@ export default class App extends Component {
   render() {
     return (
       <div>
-
         <h1>Hello World</h1>
         <form onSubmit={this.onSubmit}>
           <input 
@@ -38,6 +38,7 @@ export default class App extends Component {
             return <li key={item + idx}>{item}</li>
           })}
         </ul>
+        <FilmsList/>
       </div>
     )
   }
