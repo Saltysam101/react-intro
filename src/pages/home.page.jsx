@@ -8,7 +8,8 @@ export default function HomePage(props) {
  function  onSubmit(submitEvent){
     submitEvent.preventDefault();
     let newList = [...list, text]
-    setList({list: newList, text: ""})
+    setList(newList)
+    setText(text)
   }
     return (
       <div>
@@ -20,7 +21,7 @@ export default function HomePage(props) {
           type="text"
           id='text'
           onChange={(e) => {
-            setText({text : e.target.value})
+            setText(e.target.value)
           }} />
           <button type="submit">Add</button>
         </form>
